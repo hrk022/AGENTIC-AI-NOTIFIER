@@ -9,12 +9,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import StateGraph, END
 import gradio as gr
 
-load_dotenv()
 
-GROQ_API_KEY      = os.environ.get("GROQ_API_KEY")
-GMAIL_USER        = os.environ.get("GMAIL_USER")
-GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD")
-GNEWS_API_KEY     = os.environ.get("GNEWS_API_KEY")
 
 llm       = ChatGroq(api_key=GROQ_API_KEY, model_name="llama-3.3-70b-versatile", temperature=0.3)
 scheduler = BackgroundScheduler()
